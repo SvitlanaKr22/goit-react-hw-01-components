@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Table, Thead, Th } from './TransactionHistory.styled';
 
 export default function TransactionHistory({ props: transactions }) {
-  console.log(transactions);
   return (
     <Table>
       <Thead>
@@ -22,5 +21,5 @@ export default function TransactionHistory({ props: transactions }) {
   );
 }
 TransactionHistory.propTypes = {
-  transactions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  props: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

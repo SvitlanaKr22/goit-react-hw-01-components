@@ -6,24 +6,17 @@ import user from '../user.json';
 import stats from '../data.json';
 import friends from '../friends.json';
 import transactions from '../transactions.json';
+import { GlobalStyle } from './Globalstyle';
+import { Layout } from './Layout';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-        gap: '10px',
-      }}
-    >
+    <Layout>
+      <GlobalStyle />
       <Profile infoUser={user} />
       <Statistics title="Upload stats" stats={stats} />
       <FriendList props={friends} />
       <TransactionHistory props={transactions} />
-    </div>
+    </Layout>
   );
 };

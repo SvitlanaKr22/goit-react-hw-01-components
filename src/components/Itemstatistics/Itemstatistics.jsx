@@ -14,6 +14,8 @@ export default function ItemStatistics({
 }
 
 ItemStatistics.propTypes = {
-  label: PropTypes.string.isRequired,
-  performance: PropTypes.number.isRequired,
+  props: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }),
 };

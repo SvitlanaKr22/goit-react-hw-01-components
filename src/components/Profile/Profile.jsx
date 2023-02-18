@@ -8,7 +8,7 @@ export default function Profile({
   return (
     <Wrapper>
       <Description>
-        <ImgAvatar src={avatar} alt={username} class="avatar" />
+        <ImgAvatar src={avatar} alt={username} />
         <Name>{username}</Name>
         <Par>@{tag}</Par>
         <Par>{location}</Par>

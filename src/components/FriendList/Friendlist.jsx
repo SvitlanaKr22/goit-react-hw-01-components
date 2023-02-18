@@ -1,13 +1,14 @@
-import { FriendListItem } from 'components/Friendlistitem';
+import { FriendListItem } from 'components/Friendlistitem/Friendlistitem';
 import PropTypes from 'prop-types';
+import { List } from './Friendlist.styled';
 
 export default function FriendList({ props }) {
   return (
-    <ul class="friend-list" style={{ backgroundColor: 'green' }}>
+    <List>
       {props.map(friend => (
         <FriendListItem infoFriend={friend} key={friend.id} />
       ))}
-    </ul>
+    </List>
   );
 }
 

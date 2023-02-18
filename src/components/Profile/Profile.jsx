@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
-import Stats from './Stats';
+import Stats from '../Stats/Stats';
+import { Wrapper, ImgAvatar, Description, Name, Par } from './Profile.styled';
 
 export default function Profile({
   infoUser: { username, tag, location, avatar, stats },
 }) {
   return (
-    <div class="profile" style={{ backgroundColor: 'blueviolet' }}>
-      <div class="description">
-        <img src={avatar} alt={username} class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <Wrapper>
+      <Description>
+        <ImgAvatar src={avatar} alt={username} class="avatar" />
+        <Name>{username}</Name>
+        <Par>@{tag}</Par>
+        <Par>{location}</Par>
+      </Description>
       <Stats infoActivity={stats} />
-    </div>
+    </Wrapper>
   );
 }
 

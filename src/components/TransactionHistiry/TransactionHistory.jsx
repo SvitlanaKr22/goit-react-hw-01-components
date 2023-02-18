@@ -1,26 +1,24 @@
-import { TransactionsRow } from './TransactionsRow';
+import { TransactionsRow } from '../TransactionRow/TransactionsRow';
 import PropTypes from 'prop-types';
+import { Table, Thead, Th } from './TransactionHistory.styled';
 
 export default function TransactionHistory({ props: transactions }) {
   console.log(transactions);
   return (
-    <table
-      class="transaction-history"
-      style={{ backgroundColor: 'gray', fontSize: 16 }}
-    >
-      <thead>
+    <Table>
+      <Thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <Th>Type</Th>
+          <Th>Amount</Th>
+          <Th>Currency</Th>
         </tr>
-      </thead>
+      </Thead>
       <tbody>
         {transactions.map(transaction => (
           <TransactionsRow props={transaction} key={transaction.id} />
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 }
 TransactionHistory.propTypes = {

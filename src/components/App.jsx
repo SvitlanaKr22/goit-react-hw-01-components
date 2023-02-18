@@ -1,7 +1,7 @@
-import Profile from './Profile';
-import { Statistics } from './Statistics';
-import FriendList from 'components/Friendlist';
-import TransactionHistory from 'components/TransactionHistory';
+import Profile from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+import FriendList from 'components/FriendList/Friendlist';
+import TransactionHistory from 'components/TransactionHistiry/TransactionHistory';
 import user from '../user.json';
 import stats from '../data.json';
 import friends from '../friends.json';
@@ -17,6 +17,7 @@ export const App = () => {
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
+        gap: '10px',
       }}
     >
       <Profile infoUser={user} />
